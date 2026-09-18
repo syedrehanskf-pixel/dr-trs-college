@@ -2,153 +2,195 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="DR. TRS College of Nursing & S.S. Allied Health Sciences">
 <title>DR. TRS College | Digital Campus</title>
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:Arial,sans-serif;color:#17221f;background:#f6f8f6;line-height:1.6}
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f5f8fc;color:#14213d;line-height:1.6
+}
 a{text-decoration:none;color:inherit}
 button,input,select,textarea{font:inherit}
-button{cursor:pointer}
-:root{--green:#063d34;--green2:#0a5548;--gold:#bd934c;--light:#eef3f0;--white:#fff;--muted:#69756f}
+button{cursor:pointer;border:0}
 
-.container{width:min(1150px,92%);margin:auto}
-.top{background:#03241e;color:#fff;padding:7px;font-size:12px}
-.top .container{display:flex;justify-content:space-between}
+:root{
+ --blue:#0757b8;
+ --dark:#08203b;
+ --cyan:#00a9c7;
+ --green:#0c9b68;
+ --light:#eef6ff;
+ --white:#fff;
+ --shadow:0 10px 30px rgba(0,35,80,.10);
+}
 
-header{background:#fff;position:sticky;top:0;z-index:99;box-shadow:0 2px 15px #0001}
-.nav{height:72px;display:flex;align-items:center;justify-content:space-between}
-.logo{width:45px;height:45px;border-radius:50%;background:var(--green);color:#d9bd78;display:grid;place-items:center;font-weight:bold;font-size:11px;text-align:center}
-.brand{display:flex;align-items:center;gap:10px}
-.brand b{color:var(--green);display:block;font-size:14px}
-.brand small{font-size:9px;color:#777}
-nav{display:flex;gap:18px;align-items:center}
-nav a{font-size:12px;font-weight:bold;color:#33423d}
-nav a:hover{color:var(--gold)}
-.apply{background:var(--gold);color:#fff!important;padding:10px 14px;border-radius:5px}
-.menu{display:none;border:0;background:none;font-size:28px;color:var(--green)}
+.top{
+ background:var(--dark);color:white;padding:8px 5%;
+ display:flex;justify-content:space-between;font-size:13px
+}
+nav{
+ background:#fff;position:sticky;top:0;z-index:100;
+ box-shadow:0 3px 15px #0001;padding:12px 5%;
+ display:flex;align-items:center;justify-content:space-between
+}
+.logo{display:flex;align-items:center;gap:10px;font-weight:bold;color:var(--blue)}
+.logo-icon{
+ width:45px;height:45px;border-radius:50%;background:var(--blue);
+ color:#fff;display:grid;place-items:center;font-size:21px
+}
+.links{display:flex;gap:25px;align-items:center}
+.links a{font-weight:bold;font-size:14px}
+.links a:hover{color:var(--blue)}
+.navbtn,.hero button,.primary{
+ background:var(--blue);color:#fff;padding:12px 20px;border-radius:8px
+}
+.menu{display:none;font-size:25px;background:none}
 
 .hero{
-min-height:570px;
-display:flex;
-align-items:center;
-background:linear-gradient(90deg,#03251ee8,#063d3490),
-url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1800&q=85") center/cover;
-color:#fff
+ min-height:570px;padding:80px 6%;
+ display:flex;align-items:center;
+ background:linear-gradient(120deg,#062c58,#0876bd);
+ color:white;position:relative;overflow:hidden
 }
-.hero-text{max-width:720px}
-.tag{color:#d7b96e;font-size:12px;font-weight:bold;letter-spacing:2px;text-transform:uppercase}
-.hero h1{font-size:clamp(42px,7vw,70px);line-height:1.05;margin:12px 0}
-.hero p{color:#dce7e3;margin-bottom:24px}
-.btn{display:inline-block;border:0;border-radius:5px;padding:12px 18px;font-weight:bold;font-size:12px;margin:4px}
-.btn-g{background:var(--gold);color:#fff}
-.btn-w{background:#fff;color:var(--green)}
-.btn-dark{background:var(--green);color:#fff}
+.hero:after{
+ content:"";position:absolute;width:450px;height:450px;border-radius:50%;
+ background:#00c6d720;right:-100px;top:-100px
+}
+.hero-content{max-width:750px;position:relative;z-index:2}
+.badge{
+ display:inline-block;background:#ffffff20;border:1px solid #ffffff40;
+ padding:8px 14px;border-radius:30px;margin-bottom:18px
+}
+.hero h1{font-size:clamp(38px,6vw,68px);line-height:1.05;margin-bottom:20px}
+.hero p{font-size:18px;max-width:650px;margin-bottom:30px;color:#e5f3ff}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero .secondary{background:white;color:var(--blue)}
 
-section{padding:70px 0}
-.title{margin-bottom:28px}
-.title .tag{color:var(--gold)}
-.title h2{font-size:42px;color:var(--green);margin:5px 0}
-.title p{color:var(--muted);max-width:700px}
+section{padding:70px 6%}
+.heading{text-align:center;margin-bottom:40px}
+.heading h2{font-size:35px;color:var(--dark)}
+.heading p{color:#68768b;margin-top:8px}
 
-.quick{background:#fff;padding:18px 0}
-.quick-grid{display:grid;grid-template-columns:repeat(6,1fr)}
-.quick a{text-align:center;border-right:1px solid #ddd;padding:8px;font-size:11px;color:var(--green);font-weight:bold}
-.quick span{display:block;color:#777;font-size:9px;font-weight:normal}
+.stats{
+ display:grid;grid-template-columns:repeat(4,1fr);gap:18px;
+ margin-top:-45px;position:relative;z-index:5;padding:0 6%
+}
+.stat{
+ background:white;padding:28px;text-align:center;border-radius:14px;
+ box-shadow:var(--shadow)
+}
+.stat b{font-size:32px;color:var(--blue);display:block}
 
-.about{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
-.about-img{height:420px;border-radius:10px;background:url("https://images.unsplash.com/photo-1606761568499-6d2451b23c66?auto=format&fit=crop&w=1000&q=85") center/cover}
-.about p{color:var(--muted);margin:10px 0}
-.check{margin:10px 0;font-size:13px}
-.check b{color:var(--gold);margin-right:8px}
+.cards{
+ display:grid;grid-template-columns:repeat(3,1fr);gap:22px
+}
+.card{
+ background:#fff;border-radius:15px;padding:26px;box-shadow:var(--shadow);
+ transition:.25s
+}
+.card:hover{transform:translateY(-5px)}
+.icon{
+ width:50px;height:50px;border-radius:12px;background:var(--light);
+ display:grid;place-items:center;font-size:25px;margin-bottom:15px
+}
+.card h3{margin-bottom:8px;color:var(--dark)}
+.card p{color:#65738a}
 
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.card{background:#fff;border:1px solid #dce3df;border-radius:8px;padding:22px}
-.card:hover{transform:translateY(-2px);box-shadow:0 12px 30px #0001}
-.icon{width:42px;height:42px;background:var(--green);color:#e0bd70;border-radius:5px;display:grid;place-items:center;margin-bottom:12px}
-.card h3{color:var(--green);font-size:18px}
-.card p{color:var(--muted);font-size:12px;margin-top:5px}
-.card button{margin-top:13px;background:var(--gold);color:#fff;border:0;padding:9px 13px;border-radius:4px;font-size:11px;font-weight:bold}
+.about{
+ display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center
+}
+.about-box{
+ background:linear-gradient(135deg,#e7f3ff,#fff);padding:35px;border-radius:20px
+}
+.about ul{list-style:none;margin-top:20px}
+.about li{margin:12px 0}
+.about li:before{content:"✓";color:var(--green);font-weight:bold;margin-right:10px}
 
-.stats{background:var(--green);color:#fff}
-.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);text-align:center}
-.stat strong{font-size:38px;color:#d9ba70;display:block}
-.stat span{font-size:11px;color:#d0ddd8}
+.course{
+ display:flex;flex-direction:column;justify-content:space-between
+}
+.tag{
+ display:inline-block;background:#e8f7f2;color:#087c55;
+ padding:5px 10px;border-radius:20px;font-size:12px;font-weight:bold
+}
 
-.notice-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:18px}
-.notice{background:#fff;border:1px solid #ddd;padding:22px;border-radius:8px}
-.notice h3{color:var(--green);font-size:16px}
-.notice small{color:var(--gold);font-weight:bold}
+.notice{
+ display:flex;gap:20px;padding:18px 0;border-bottom:1px solid #ddd
+}
+.date{min-width:65px;text-align:center;background:var(--blue);color:white;border-radius:8px;padding:8px}
+.date b{font-size:20px;display:block}
 
-.admission{background:#f1eadb}
-.admission-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px}
-.step{background:#fff;margin:10px 0;padding:15px;border-radius:6px}
-.step b{color:var(--green)}
-.step span{display:block;color:var(--muted);font-size:11px}
+.portal{
+ background:var(--dark);color:white;border-radius:25px;padding:45px;
+ display:grid;grid-template-columns:1fr 1fr;gap:35px
+}
+.portal h2{font-size:35px}
+.portal p{color:#b9c9dc;margin:10px 0 25px}
+.portal-card{background:#ffffff12;padding:25px;border-radius:15px}
+.portal-card input,.portal-card select{
+ width:100%;padding:13px;margin:7px 0;border-radius:7px;border:0
+}
 
-.campus{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
-.photo{height:210px;border-radius:8px;background-size:cover;background-position:center;position:relative;overflow:hidden}
-.photo div{position:absolute;bottom:0;width:100%;padding:15px;color:#fff;background:linear-gradient(transparent,#000)}
-.photo h3{font-size:14px}
+.ai{
+ background:linear-gradient(135deg,#071e3a,#074e83);
+ color:white
+}
+.ai-box{
+ max-width:850px;margin:auto;background:#ffffff0d;
+ border:1px solid #ffffff20;border-radius:20px;overflow:hidden
+}
+.ai-head{padding:22px;border-bottom:1px solid #ffffff20}
+.chat{
+ height:300px;overflow:auto;padding:20px
+}
+.msg{padding:12px 15px;border-radius:12px;margin:10px 0;max-width:80%}
+.bot{background:#ffffff15}
+.user{background:var(--cyan);margin-left:auto}
+.ai-input{display:flex;padding:15px;gap:8px}
+.ai-input input{
+ flex:1;padding:14px;border:0;border-radius:8px
+}
 
-.portal{background:var(--light)}
-.portal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
-
-.ai{background:#042a23;color:#fff}
-.ai-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:30px;align-items:center}
-.ai h2{font-size:45px;line-height:1.1}
-.ai p{color:#cbd8d3;margin:12px 0}
-.chatbox{background:#fff;color:#222;border-radius:8px;overflow:hidden}
-.chat-head{background:#edf2ef;padding:15px;color:var(--green);font-weight:bold}
-.chat{height:260px;overflow:auto;padding:12px}
-.msg{padding:9px 12px;border-radius:8px;margin:8px 0;font-size:12px;max-width:85%}
-.bot{background:#e8efeb}
-.user{background:var(--green);color:#fff;margin-left:auto}
-.chat-input{display:flex;border-top:1px solid #ddd}
-.chat-input input{flex:1;border:0;padding:14px;outline:0}
-.chat-input button{border:0;background:var(--gold);color:#fff;padding:0 18px}
-
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:35px}
-.form{background:#fff;border:1px solid #ddd;padding:23px;border-radius:8px}
-.form label{font-size:11px;font-weight:bold;color:var(--green);display:block}
-.form input,.form select,.form textarea{width:100%;padding:11px;margin:5px 0 13px;border:1px solid #d4dcd8;border-radius:4px;outline:0}
-.form textarea{height:100px}
-.form button{background:var(--green);color:#fff;border:0;padding:11px 17px;border-radius:4px;font-weight:bold}
-.success{display:none;background:#e6f5eb;color:#267047;padding:10px;margin-top:10px;font-size:12px}
-
-footer{background:#03221c;color:#c9d4d0;padding:45px 0}
-.footer{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px}
-footer h3{color:#fff;font-size:14px;margin-bottom:10px}
-footer p,footer a{font-size:11px;color:#9eaaa6;display:block;margin:5px 0}
-.copy{border-top:1px solid #ffffff22;margin-top:25px;padding-top:15px;font-size:10px}
-
-.modal{display:none;position:fixed;inset:0;background:#0009;z-index:999;padding:15px;align-items:center;justify-content:center}
+.modal{
+ display:none;position:fixed;inset:0;background:#0009;
+ z-index:500;align-items:center;justify-content:center;padding:20px
+}
 .modal.show{display:flex}
-.modal-box{background:#fff;width:min(600px,100%);max-height:90vh;overflow:auto;padding:25px;border-radius:8px;position:relative}
-.modal-box h2{color:var(--green);font-size:30px}
-.close{position:absolute;right:15px;top:8px;border:0;background:none;font-size:27px}
-.modal-box p{font-size:12px;color:var(--muted);margin:5px 0 15px}
+.modal-box{
+ background:white;max-width:500px;width:100%;padding:30px;
+ border-radius:18px;max-height:90vh;overflow:auto
+}
+.modal-box h2{margin-bottom:15px}
+.modal-box input,.modal-box select,.modal-box textarea{
+ width:100%;padding:12px;margin:7px 0;border:1px solid #ccd5e0;border-radius:7px
+}
+.close{float:right;background:#eee;border-radius:50%;width:35px;height:35px}
+.form-btn{width:100%;margin-top:12px;background:var(--blue);color:#fff;padding:13px;border-radius:8px}
+
+footer{background:#061a30;color:white;padding:55px 6% 25px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}
+footer h3{margin-bottom:15px}
+footer p,footer li{color:#aebed0;margin:8px 0}
+footer ul{list-style:none}
+.copy{text-align:center;border-top:1px solid #ffffff20;margin-top:35px;padding-top:20px;color:#8fa2b8}
 
 @media(max-width:850px){
-nav{display:none}.menu{display:block}
-.quick-grid{grid-template-columns:repeat(3,1fr)}
-.about,.admission-grid,.ai-grid,.contact{grid-template-columns:1fr}
-.cards{grid-template-columns:1fr 1fr}
-.campus{grid-template-columns:1fr 1fr}
-.portal-grid{grid-template-columns:1fr 1fr}
-.notice-grid{grid-template-columns:1fr}
-.footer{grid-template-columns:1fr 1fr}
-.stat-grid{grid-template-columns:1fr 1fr;gap:20px}
+ .links{display:none;position:absolute;top:70px;left:0;right:0;background:white;padding:20px;flex-direction:column}
+ .links.open{display:flex}
+ .menu{display:block}
+ .stats,.cards{grid-template-columns:1fr 1fr}
+ .about,.portal{grid-template-columns:1fr}
+ .footer-grid{grid-template-columns:1fr}
 }
 @media(max-width:550px){
-.hero{min-height:520px}
-.cards,.campus,.portal-grid,.footer{grid-template-columns:1fr}
-.quick-grid{grid-template-columns:repeat(2,1fr)}
-.hero h1{font-size:43px}
-.title h2{font-size:34px}
+ .stats,.cards{grid-template-columns:1fr}
+ .hero{padding:65px 5%}
+ section{padding:55px 5%}
+ .portal{padding:25px}
+ .top{font-size:11px}
 }
 </style>
 </head>
@@ -156,540 +198,444 @@ nav{display:none}.menu{display:block}
 <body>
 
 <div class="top">
-<div class="container">
-<span>DR. TRS College Digital Campus</span>
-<span>Academic • Admissions • Student Services</span>
+ <span>📞 Admissions & Enquiries: Contact College Office</span>
+ <span>🎓 DR. TRS College Digital Campus</span>
 </div>
-</div>
-
-<header>
-<div class="container nav">
-<a href="#home" class="brand">
-<div class="logo">DR<br>TRS</div>
-<div><b>DR. TRS COLLEGE</b><small>NURSING & S.S. ALLIED HEALTH SCIENCES</small></div>
-</a>
 
 <nav>
-<a href="#about">About</a>
-<a href="#academics">Academics</a>
-<a href="#admission">Admissions</a>
-<a href="#campus">Campus</a>
-<a href="#ai">Study AI</a>
-<a href="#contact">Contact</a>
-<a href="#admission" class="apply">APPLY NOW</a>
+ <a href="#home" class="logo">
+  <span class="logo-icon">TRS</span>
+  <span>DR. TRS COLLEGE<br><small>Nursing & Allied Health Sciences</small></span>
+ </a>
+
+ <button class="menu" onclick="toggleMenu()">☰</button>
+
+ <div class="links" id="links">
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#courses">Courses</a>
+  <a href="#campus">Campus</a>
+  <a href="#notices">Notices</a>
+  <a href="#ai">Study AI</a>
+  <button class="navbtn" onclick="openModal('applyModal')">Apply Now</button>
+ </div>
 </nav>
 
-<button class="menu" onclick="mobileMenu()">☰</button>
-</div>
-<div id="mobileNav" style="display:none;background:#fff;padding:12px">
-<div class="container">
-<a href="#about" onclick="mobileMenu()">About</a><br>
-<a href="#academics" onclick="mobileMenu()">Academics</a><br>
-<a href="#admission" onclick="mobileMenu()">Admissions</a><br>
-<a href="#campus" onclick="mobileMenu()">Campus</a><br>
-<a href="#ai" onclick="mobileMenu()">Study AI</a><br>
-<a href="#contact" onclick="mobileMenu()">Contact</a>
-</div>
-</div>
-</header>
-
-<main>
-
 <section class="hero" id="home">
-<div class="container hero-text">
-<div class="tag">Welcome to the Digital Campus</div>
-<h1>Learn. Serve. Lead.</h1>
-<p>
-A modern digital experience for students, applicants and the academic community of DR. TRS College of Nursing & S.S. Allied Health Sciences.
-</p>
-<a href="#admission" class="btn btn-g">Apply Now</a>
-<a href="#academics" class="btn btn-w">Explore Academics</a>
-</div>
+ <div class="hero-content">
+  <span class="badge">🎓 Welcome to Digital Campus</span>
+  <h1>Learn. Serve. Lead.</h1>
+  <p>
+   DR. TRS College of Nursing & S.S. Allied Health Sciences —
+   a modern digital campus for students, academics and healthcare education.
+  </p>
+  <div class="hero-actions">
+   <button onclick="openModal('applyModal')">Apply Now →</button>
+   <button class="secondary" onclick="openModal('portalModal')">Student Portal</button>
+   <button class="secondary" onclick="location.href='#ai'">Ask Study AI</button>
+  </div>
+ </div>
 </section>
 
-<div class="quick">
-<div class="container quick-grid">
-<a href="#admission">📝<b>Admissions</b><span>Apply online</span></a>
-<a href="#academics">📚<b>Academics</b><span>Programs</span></a>
-<a href="#ai">🤖<b>Study AI</b><span>Academic help</span></a>
-<a href="#campus">🏫<b>Campus</b><span>Explore</span></a>
-<a href="#contact">📞<b>Help Desk</b><span>Enquiries</span></a>
-<a href="#portal">🎓<b>Student Portal</b><span>Access</span></a>
-</div>
+<div class="stats">
+ <div class="stat"><b>🎓</b><span>Quality Education</span></div>
+ <div class="stat"><b>🏥</b><span>Healthcare Focus</span></div>
+ <div class="stat"><b>📚</b><span>Digital Learning</span></div>
+ <div class="stat"><b>🤖</b><span>Study AI Support</span></div>
 </div>
 
 <section id="about">
-<div class="container about">
-<div class="about-img"></div>
-<div>
-<div class="title">
-<div class="tag">About the College</div>
-<h2>Education with purpose.</h2>
-<p>
-DR. TRS College provides an academic-focused digital platform for learning, admissions, student support and campus information.
-</p>
-</div>
-<div class="check"><b>✓</b> Student-centred academic environment</div>
-<div class="check"><b>✓</b> Nursing and allied health education</div>
-<div class="check"><b>✓</b> Digital student services</div>
-<div class="check"><b>✓</b> Academic resources and study support</div>
-<a href="#contact" class="btn btn-dark">Contact College</a>
-</div>
-</div>
+ <div class="about">
+  <div>
+   <div class="heading" style="text-align:left;margin-bottom:15px">
+    <h2>About DR. TRS College</h2>
+    <p>Education with knowledge, skills and service.</p>
+   </div>
+   <p>
+    Our digital campus brings academic information, student services,
+    courses, notices and study resources together in one place.
+   </p>
+   <ul>
+    <li>Student-focused academic environment</li>
+    <li>Nursing and allied health education</li>
+    <li>Digital student services</li>
+    <li>Study resources and academic assistance</li>
+   </ul>
+  </div>
+
+  <div class="about-box">
+   <h2>🏫 Digital Campus</h2>
+   <p style="margin-top:12px">
+    Explore courses, access student services, read notices and use the
+    Study AI assistant for academic questions.
+   </p>
+  </div>
+ </div>
 </section>
 
-<section id="academics" style="background:#edf2ef">
-<div class="container">
-<div class="title">
-<div class="tag">Academic School</div>
-<h2>Programs & Learning</h2>
-<p>Explore the academic areas available through the digital campus.</p>
-</div>
+<section id="courses" style="background:#eef5fb">
+ <div class="heading">
+  <h2>Academic Programs</h2>
+  <p>Explore healthcare and allied health education.</p>
+ </div>
 
-<div class="cards">
+ <div class="cards">
+  <div class="card course">
+   <div>
+    <div class="icon">🩺</div>
+    <span class="tag">Nursing</span>
+    <h3>B.Sc. Nursing</h3>
+    <p>Academic and clinical learning in professional nursing.</p>
+   </div>
+   <button class="primary" style="margin-top:20px" onclick="courseInfo('B.Sc. Nursing')">View Details</button>
+  </div>
 
-<div class="card">
-<div class="icon">RN</div>
-<h3>Nursing</h3>
-<p>Study support for nursing concepts, theory, revision and academic preparation.</p>
-<button onclick="openModal('Nursing','Nursing academic information')">Explore</button>
-</div>
+  <div class="card course">
+   <div>
+    <div class="icon">💉</div>
+    <span class="tag">Healthcare</span>
+    <h3>GNM Nursing</h3>
+    <p>Professional nursing education with practical learning.</p>
+   </div>
+   <button class="primary" style="margin-top:20px" onclick="courseInfo('GNM Nursing')">View Details</button>
+  </div>
 
-<div class="card">
-<div class="icon">AH</div>
-<h3>Allied Health Sciences</h3>
-<p>Academic resources and learning support for allied health subjects.</p>
-<button onclick="openModal('Allied Health Sciences','Allied Health academic information')">Explore</button>
-</div>
-
-<div class="card">
-<div class="icon">🧬</div>
-<h3>Basic Sciences</h3>
-<p>Anatomy, physiology, biology and other foundational academic subjects.</p>
-<button onclick="openModal('Basic Sciences','Basic Science learning resources')">Explore</button>
-</div>
-
-</div>
-</div>
-</section>
-
-<section class="stats">
-<div class="container stat-grid">
-<div class="stat"><strong>01</strong><span>Digital Campus</span></div>
-<div class="stat"><strong>24/7</strong><span>Study Resources</span></div>
-<div class="stat"><strong>AI</strong><span>Academic Assistant</span></div>
-<div class="stat"><strong>∞</strong><span>Learning</span></div>
-</div>
-</section>
-
-<section id="notices">
-<div class="container">
-<div class="title">
-<div class="tag">Announcements</div>
-<h2>Notice Board</h2>
-</div>
-<div class="notice-grid">
-<div class="notice">
-<small>ACADEMIC</small>
-<h3>Academic resources and study support</h3>
-<p>Students can use the Study AI for revision, explanations and practice questions.</p>
-</div>
-<div class="notice">
-<small>ADMISSIONS</small>
-<h3>Applications</h3>
-<p>Use the online enquiry form for admission information.</p>
-</div>
-<div class="notice">
-<small>STUDENTS</small>
-<h3>Digital Services</h3>
-<p>Student portal interface is available from this website.</p>
-</div>
-</div>
-</div>
-</section>
-
-<section id="admission" class="admission">
-<div class="container admission-grid">
-<div>
-<div class="title">
-<div class="tag">Admissions</div>
-<h2>Start your academic journey.</h2>
-<p>Submit an admission enquiry and the college can respond through the configured Netlify form.</p>
-</div>
-<button class="btn btn-dark" onclick="openAdmission()">Apply Now</button>
-</div>
-
-<div>
-<div class="step"><b>01 — Explore</b><span>Review your preferred academic area.</span></div>
-<div class="step"><b>02 — Apply</b><span>Submit your basic admission enquiry.</span></div>
-<div class="step"><b>03 — Connect</b><span>College admission team can follow up.</span></div>
-<div class="step"><b>04 — Enrol</b><span>Complete official admission requirements.</span></div>
-</div>
-</div>
+  <div class="card course">
+   <div>
+    <div class="icon">🔬</div>
+    <span class="tag">Allied Health</span>
+    <h3>Allied Health Sciences</h3>
+    <p>Build skills for modern healthcare and diagnostic services.</p>
+   </div>
+   <button class="primary" style="margin-top:20px" onclick="courseInfo('Allied Health Sciences')">View Details</button>
+  </div>
+ </div>
 </section>
 
 <section id="campus">
-<div class="container">
-<div class="title">
-<div class="tag">Digital Campus</div>
-<h2>Explore Campus</h2>
-</div>
+ <div class="heading">
+  <h2>Campus Services</h2>
+  <p>Everything students need in one digital campus.</p>
+ </div>
 
-<div class="campus">
-<div class="photo" style="background-image:url('https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=80')"><div><h3>Campus</h3></div></div>
-<div class="photo" style="background-image:url('https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=800&q=80')"><div><h3>Healthcare Learning</h3></div></div>
-<div class="photo" style="background-image:url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80')"><div><h3>Classrooms</h3></div></div>
-<div class="photo" style="background-image:url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=800&q=80')"><div><h3>Library</h3></div></div>
-</div>
-</div>
+ <div class="cards">
+  <div class="card">
+   <div class="icon">📖</div>
+   <h3>Digital Library</h3>
+   <p>Access study resources, notes and academic material.</p>
+  </div>
+  <div class="card">
+   <div class="icon">📅</div>
+   <h3>Academic Calendar</h3>
+   <p>Keep track of important academic dates and activities.</p>
+  </div>
+  <div class="card">
+   <div class="icon">📝</div>
+   <h3>Examinations</h3>
+   <p>Exam information, preparation and academic guidance.</p>
+  </div>
+  <div class="card">
+   <div class="icon">👨‍🎓</div>
+   <h3>Student Support</h3>
+   <p>Helpful digital services for students and applicants.</p>
+  </div>
+  <div class="card">
+   <div class="icon">🏆</div>
+   <h3>Activities</h3>
+   <p>Discover academic, cultural and student activities.</p>
+  </div>
+  <div class="card">
+   <div class="icon">📞</div>
+   <h3>Help Desk</h3>
+   <p>Contact the college for admissions and student queries.</p>
+  </div>
+ </div>
 </section>
 
-<section id="portal" class="portal">
-<div class="container">
-<div class="title">
-<div class="tag">Digital Services</div>
-<h2>Student & Academic Portals</h2>
-<p>Demo portal interfaces. Real authentication should be connected before production use.</p>
-</div>
+<section id="notices" style="background:#eef5fb">
+ <div class="heading">
+  <h2>Latest Notices</h2>
+  <p>Important information for students and applicants.</p>
+ </div>
 
-<div class="portal-grid">
+ <div class="card" style="max-width:900px;margin:auto">
+  <div class="notice">
+   <div class="date"><b>01</b>SEP</div>
+   <div><h3>Admissions Information</h3><p>Students can contact the college office for current admission information.</p></div>
+  </div>
 
-<div class="card">
-<div class="icon">🎓</div>
-<h3>Student Portal</h3>
-<p>Academic services and student dashboard.</p>
-<button onclick="portal('Student')">Open Portal</button>
-</div>
+  <div class="notice">
+   <div class="date"><b>15</b>SEP</div>
+   <div><h3>Academic Updates</h3><p>Students should regularly check the digital campus for academic updates.</p></div>
+  </div>
 
-<div class="card">
-<div class="icon">📝</div>
-<h3>Applicant Portal</h3>
-<p>Admission application access.</p>
-<button onclick="portal('Applicant')">Open Portal</button>
-</div>
-
-<div class="card">
-<div class="icon">👨‍🏫</div>
-<h3>Faculty Portal</h3>
-<p>Faculty academic services.</p>
-<button onclick="portal('Faculty')">Open Portal</button>
-</div>
-
-<div class="card">
-<div class="icon">🔐</div>
-<h3>Admin Portal</h3>
-<p>Administration interface.</p>
-<button onclick="portal('Admin')">Open Portal</button>
-</div>
-
-</div>
-</div>
+  <div class="notice">
+   <div class="date"><b>20</b>SEP</div>
+   <div><h3>Student Services</h3><p>Digital student services are available through this portal.</p></div>
+  </div>
+ </div>
 </section>
 
-<section id="ai" class="ai">
-<div class="container ai-grid">
-<div>
-<div class="tag">Academic Assistant</div>
-<h2>Study AI</h2>
-<p>
-Ask academic questions about anatomy, physiology, nursing, biology, revision, study planning and quizzes.
-</p>
-<button class="btn btn-g" onclick="document.getElementById('question').focus()">Ask a Question</button>
-</div>
+<section>
+ <div class="portal">
+  <div>
+   <h2>Student Digital Portal</h2>
+   <p>
+    Access your student services, academic information and support.
+    The portal interface is ready for integration with the college's
+    real student database.
+   </p>
+   <button class="primary" onclick="openModal('portalModal')">Open Student Portal →</button>
+  </div>
 
-<div class="chatbox">
-<div class="chat-head">🤖 DR. TRS Study AI<br><small>Studies & academic topics only</small></div>
-<div class="chat" id="chat">
-<div class="msg bot">Hello! Ask me a study question. Example: “Explain the cardiac cycle in simple words.”</div>
-</div>
-<div class="chat-input">
-<input id="question" placeholder="Ask a study question..." onkeydown="if(event.key==='Enter')askAI()">
-<button onclick="askAI()">Ask</button>
-</div>
-</div>
-</div>
+  <div class="portal-card">
+   <h3>Quick Access</h3>
+   <p>🎓 Student Login</p>
+   <p>📚 Study Resources</p>
+   <p>📅 Academic Calendar</p>
+   <p>📝 Examination Information</p>
+  </div>
+ </div>
 </section>
 
-<section id="contact">
-<div class="container contact">
-<div>
-<div class="title">
-<div class="tag">Help Desk</div>
-<h2>Need information?</h2>
-<p>Send an enquiry for admissions, academics or student services.</p>
-</div>
-<div class="card">
-<h3>Admissions</h3>
-<p>Use the online application form.</p>
-</div>
-<br>
-<div class="card">
-<h3>Academic Support</h3>
-<p>Use the Study AI for academic questions.</p>
-</div>
-</div>
+<section class="ai" id="ai">
+ <div class="heading">
+  <h2 style="color:white">🤖 TRS Study AI</h2>
+  <p style="color:#b8d1e7">
+   Ask academic questions — focused on studies and learning.
+  </p>
+ </div>
 
-<form class="form" id="contactForm" name="contact-enquiry" method="POST" data-netlify="true">
-<input type="hidden" name="form-name" value="contact-enquiry">
-<label>Name</label>
-<input required name="name" placeholder="Your name">
+ <div class="ai-box">
+  <div class="ai-head">
+   <b>TRS Academic Assistant</b><br>
+   <small>Ask about Biology, Nursing, Anatomy, Physiology, Pharmacology, study plans and more.</small>
+  </div>
 
-<label>Email</label>
-<input required type="email" name="email" placeholder="you@example.com">
+  <div class="chat" id="chat">
+   <div class="msg bot">
+    👋 Hello! I am TRS Study AI. Ask me a study-related question.
+   </div>
+  </div>
 
-<label>Subject</label>
-<select name="subject">
-<option>Admissions</option>
-<option>Academics</option>
-<option>Student Services</option>
-<option>General Enquiry</option>
-</select>
-
-<label>Message</label>
-<textarea required name="message" placeholder="Write your enquiry"></textarea>
-
-<button type="submit">Send Enquiry</button>
-<div class="success" id="contactSuccess">Your enquiry has been submitted.</div>
-</form>
-</div>
+  <div class="ai-input">
+   <input id="question" placeholder="Ask a study question..."
+          onkeydown="if(event.key==='Enter')askAI()">
+   <button class="primary" onclick="askAI()">Send</button>
+  </div>
+ </div>
 </section>
 
-</main>
+<section>
+ <div class="heading">
+  <h2>Contact & Enquiry</h2>
+  <p>Need help? Send an enquiry.</p>
+ </div>
+
+ <div class="cards">
+  <div class="card">
+   <div class="icon">📍</div>
+   <h3>College</h3>
+   <p>DR. TRS College of Nursing & S.S. Allied Health Sciences</p>
+  </div>
+  <div class="card">
+   <div class="icon">📞</div>
+   <h3>Admissions</h3>
+   <p>Contact the college office for current admission information.</p>
+  </div>
+  <div class="card">
+   <div class="icon">✉️</div>
+   <h3>Email</h3>
+   <p>Use the enquiry form to contact the college.</p>
+  </div>
+ </div>
+
+ <div style="text-align:center;margin-top:30px">
+  <button class="primary" onclick="openModal('contactModal')">Send Enquiry</button>
+ </div>
+</section>
 
 <footer>
-<div class="container footer">
-<div>
-<h3>DR. TRS COLLEGE</h3>
-<p>Digital campus for Nursing & S.S. Allied Health Sciences.</p>
-</div>
-<div>
-<h3>Explore</h3>
-<a href="#about">About</a>
-<a href="#academics">Academics</a>
-<a href="#admission">Admissions</a>
-</div>
-<div>
-<h3>Students</h3>
-<a href="#portal">Student Portal</a>
-<a href="#ai">Study AI</a>
-<a href="#notices">Notices</a>
-</div>
-<div>
-<h3>Help</h3>
-<a href="#contact">Contact</a>
-<a href="#admission">Apply Now</a>
-</div>
-</div>
-<div class="container copy">
-© <span id="year"></span> DR. TRS College. Digital Campus.
-</div>
+ <div class="footer-grid">
+  <div>
+   <h3>DR. TRS College</h3>
+   <p>
+    Digital campus for Nursing and S.S. Allied Health Sciences education,
+    student services and academic support.
+   </p>
+  </div>
+
+  <div>
+   <h3>Quick Links</h3>
+   <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#courses">Courses</a></li>
+    <li><a href="#notices">Notices</a></li>
+    <li><a href="#ai">Study AI</a></li>
+   </ul>
+  </div>
+
+  <div>
+   <h3>Student</h3>
+   <ul>
+    <li><a href="#" onclick="openModal('portalModal');return false">Student Portal</a></li>
+    <li><a href="#" onclick="openModal('applyModal');return false">Apply Now</a></li>
+    <li><a href="#" onclick="openModal('contactModal');return false">Help Desk</a></li>
+   </ul>
+  </div>
+ </div>
+
+ <div class="copy">
+  © 2026 DR. TRS College Digital Campus. All Rights Reserved.
+ </div>
 </footer>
 
-<!-- ADMISSION MODAL -->
-<div class="modal" id="admissionModal">
-<div class="modal-box">
-<button class="close" onclick="closeModal('admissionModal')">×</button>
-<h2>Admission Application</h2>
-<p>Submit an admission enquiry.</p>
+<!-- APPLY MODAL -->
+<div class="modal" id="applyModal">
+ <div class="modal-box">
+  <button class="close" onclick="closeModal('applyModal')">×</button>
+  <h2>🎓 Apply Now</h2>
+  <p>Submit your enquiry for admission.</p>
 
-<form class="form" id="admissionForm" name="admission-application" method="POST" data-netlify="true">
-<input type="hidden" name="form-name" value="admission-application">
-
-<label>Full Name</label>
-<input required name="name" placeholder="Full name">
-
-<label>Mobile Number</label>
-<input required name="mobile" placeholder="Mobile number">
-
-<label>Email</label>
-<input required type="email" name="email" placeholder="Email">
-
-<label>Program</label>
-<select required name="program">
-<option value="">Select program</option>
-<option>Nursing</option>
-<option>Allied Health Sciences</option>
-<option>Other</option>
-</select>
-
-<label>Qualification</label>
-<input name="qualification" placeholder="12th / Diploma / Degree">
-
-<label>Message</label>
-<textarea name="message" placeholder="Your enquiry"></textarea>
-
-<button type="submit">Submit Application</button>
-<div class="success" id="admissionSuccess">Application enquiry submitted.</div>
-</form>
-</div>
+  <form onsubmit="submitForm(event,'Application submitted successfully! The college office can contact you for further admission information.')">
+   <input required placeholder="Full Name">
+   <input required type="tel" placeholder="Mobile Number">
+   <input required type="email" placeholder="Email Address">
+   <select required>
+    <option value="">Select Program</option>
+    <option>B.Sc. Nursing</option>
+    <option>GNM Nursing</option>
+    <option>Allied Health Sciences</option>
+   </select>
+   <button class="form-btn">Submit Application</button>
+  </form>
+ </div>
 </div>
 
 <!-- PORTAL MODAL -->
 <div class="modal" id="portalModal">
-<div class="modal-box">
-<button class="close" onclick="closeModal('portalModal')">×</button>
-<h2 id="portalTitle">Student Portal</h2>
-<p id="portalText">Demo login interface.</p>
+ <div class="modal-box">
+  <button class="close" onclick="closeModal('portalModal')">×</button>
+  <h2>🎓 Student Portal</h2>
+  <p>Student login interface.</p>
 
-<form class="form" id="loginForm">
-<label>User ID / Email</label>
-<input required placeholder="Enter ID" id="loginId">
+  <form onsubmit="portalLogin(event)">
+   <input required id="studentId" placeholder="Student ID / Roll Number">
+   <input required type="password" placeholder="Password">
+   <button class="form-btn">Login</button>
+  </form>
 
-<label>Password</label>
-<input required type="password" placeholder="Password">
-
-<button type="submit">Sign In</button>
-<div class="success" id="loginSuccess">Demo login submitted.</div>
-</form>
+  <p style="margin-top:15px;font-size:13px">
+   Demo interface — connect this form to the college's real authentication system before using for actual student accounts.
+  </p>
+ </div>
 </div>
-</div>
 
-<!-- INFORMATION MODAL -->
-<div class="modal" id="infoModal">
-<div class="modal-box">
-<button class="close" onclick="closeModal('infoModal')">×</button>
-<h2 id="infoTitle"></h2>
-<p id="infoText"></p>
-<button class="btn btn-dark" onclick="closeModal('infoModal')">Close</button>
-</div>
+<!-- CONTACT MODAL -->
+<div class="modal" id="contactModal">
+ <div class="modal-box">
+  <button class="close" onclick="closeModal('contactModal')">×</button>
+  <h2>📩 Contact College</h2>
+
+  <form onsubmit="submitForm(event,'Your enquiry has been recorded successfully.')">
+   <input required placeholder="Your Name">
+   <input required type="email" placeholder="Email">
+   <input required type="tel" placeholder="Mobile">
+   <textarea required rows="5" placeholder="Your enquiry"></textarea>
+   <button class="form-btn">Send Enquiry</button>
+  </form>
+ </div>
 </div>
 
 <script>
-document.getElementById("year").textContent=new Date().getFullYear();
-
-function mobileMenu(){
-let x=document.getElementById("mobileNav");
-x.style.display=x.style.display==="block"?"none":"block";
+function toggleMenu(){
+ document.getElementById("links").classList.toggle("open");
 }
 
 function openModal(id){
-document.getElementById(id).classList.add("show");
-document.body.style.overflow="hidden";
+ document.getElementById(id).classList.add("show");
 }
 
 function closeModal(id){
-document.getElementById(id).classList.remove("show");
-document.body.style.overflow="";
+ document.getElementById(id).classList.remove("show");
 }
 
-function openAdmission(){
-openModal("admissionModal");
+window.onclick=function(e){
+ document.querySelectorAll(".modal").forEach(m=>{
+  if(e.target===m)m.classList.remove("show");
+ });
 }
 
-function portal(type){
-document.getElementById("portalTitle").textContent=type+" Portal";
-document.getElementById("portalText").textContent=
-"Welcome to the "+type+" Portal. This is a demo interface. Real authentication/database must be connected before production use.";
-document.getElementById("loginSuccess").style.display="none";
-document.getElementById("loginForm").reset();
-openModal("portalModal");
+function submitForm(e,message){
+ e.preventDefault();
+ alert("✅ "+message);
+ e.target.reset();
+ e.target.closest(".modal").classList.remove("show");
 }
 
-function openModalInfo(title,text){
-document.getElementById("infoTitle").textContent=title;
-document.getElementById("infoText").textContent=text;
-openModal("infoModal");
+function portalLogin(e){
+ e.preventDefault();
+ alert("🎓 Student Portal login interface is working.\n\nFor real student login, a secure backend/database must be connected.");
 }
 
-function openModal(title,text){
-if(title==="Nursing"||title==="Allied Health Sciences"||title==="Basic Sciences"){
-document.getElementById("infoTitle").textContent=title;
-document.getElementById("infoText").textContent=text+". Add official college course details here when verified.";
-document.getElementById("infoModal").classList.add("show");
-document.body.style.overflow="hidden";
-return;
-}
-document.getElementById(title).classList.add("show");
-document.body.style.overflow="hidden";
-}
-
-function studyAnswer(q){
-q=q.toLowerCase();
-
-if(q.includes("anatomy"))
-return "For Anatomy, learn structure + location + function. Start with a diagram, label it from memory, then test yourself without notes.";
-
-if(q.includes("physiology"))
-return "For Physiology, focus on mechanism → cause → effect. Tell me the exact topic and I can explain it step by step.";
-
-if(q.includes("nursing"))
-return "I can help with nursing theory, anatomy, physiology, fundamentals, revision, care-plan concepts and practice questions.";
-
-if(q.includes("biology"))
-return "For Biology, learn definitions first, then processes, diagrams and examples. Tell me your exact chapter.";
-
-if(q.includes("quiz")||q.includes("mcq"))
-return "Sure! Ask like: “Give me 10 Anatomy MCQs on the respiratory system.”";
-
-if(q.includes("study plan")||q.includes("timetable"))
-return "Try 40 minutes focused study + 10 minutes break. Use active recall, practice questions and review your mistakes.";
-
-if(q.includes("exam")||q.includes("revision"))
-return "For revision: list topics, mark weak areas, use active recall, solve questions, review mistakes and finish with a timed mock test.";
-
-return "I can help with Anatomy, Physiology, Nursing, Biology, study plans, revision and academic quizzes. Please mention your subject and topic.";
+function courseInfo(course){
+ alert(
+  "📚 "+course+
+  "\n\nFor official eligibility, fees, admission dates and course details, please contact the college office."
+ );
 }
 
 function askAI(){
-let input=document.getElementById("question");
-let q=input.value.trim();
-if(!q)return;
+ const input=document.getElementById("question");
+ const q=input.value.trim();
+ if(!q)return;
 
-let chat=document.getElementById("chat");
+ const chat=document.getElementById("chat");
 
-let user=document.createElement("div");
-user.className="msg user";
-user.textContent=q;
-chat.appendChild(user);
+ chat.innerHTML+=`<div class="msg user">${escapeHTML(q)}</div>`;
+ input.value="";
 
-input.value="";
+ let answer=getStudyAnswer(q);
 
-let bot=document.createElement("div");
-bot.className="msg bot";
-bot.textContent=studyAnswer(q);
-chat.appendChild(bot);
+ setTimeout(()=>{
+  chat.innerHTML+=`<div class="msg bot">${answer}</div>`;
+  chat.scrollTop=chat.scrollHeight;
+ },400);
 
-chat.scrollTop=chat.scrollHeight;
+ chat.scrollTop=chat.scrollHeight;
 }
 
-function netlifyForm(id,success){
-let form=document.getElementById(id);
-
-form.addEventListener("submit",async function(e){
-e.preventDefault();
-
-try{
-let data=new FormData(form);
-
-await fetch("/",{
-method:"POST",
-headers:{"Content-Type":"application/x-www-form-urlencoded"},
-body:new URLSearchParams(data).toString()
-});
-
-document.getElementById(success).style.display="block";
-form.reset();
-
-}catch(err){
-document.getElementById(success).style.display="block";
-}
-});
+function escapeHTML(text){
+ return text.replace(/[&<>"']/g,function(c){
+  return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c];
+ });
 }
 
-netlifyForm("contactForm","contactSuccess");
-netlifyForm("admissionForm","admissionSuccess");
+function getStudyAnswer(q){
+ const x=q.toLowerCase();
 
-document.getElementById("loginForm").addEventListener("submit",function(e){
-e.preventDefault();
-document.getElementById("loginSuccess").style.display="block";
-});
+ if(x.includes("anatomy"))
+  return "🫀 Anatomy is the study of the structure of the human body. Start with anatomical position, planes, tissues, organs and body systems.";
 
-document.querySelectorAll(".modal").forEach(function(m){
-m.addEventListener("click",function(e){
-if(e.target===m)closeModal(m.id);
-});
-});
-</script>
+ if(x.includes("physiology"))
+  return "🧠 Physiology explains how body systems function. Study one system at a time and connect its normal function with clinical examples.";
 
-</body>
-</html>
+ if(x.includes("biology"))
+  return "🔬 Biology studies living organisms. For exams, focus on cell structure, genetics, metabolism, tissues and major biological processes.";
+
+ if(x.includes("pharmacology")||x.includes("medicine"))
+  return "💊 Pharmacology studies drugs and their effects. Learn drug class, mechanism, indications, contraindications, adverse effects and nursing considerations.";
+
+ if(x.includes("nursing"))
+  return "🩺 For nursing preparation, focus on Anatomy, Physiology, Fundamentals of Nursing, Pharmacology, Medical-Surgical Nursing and clinical skills.";
+
+ if(x.includes("study plan")||x.includes("timetable"))
+  return "📅 Try this plan: 2 hours concept study + 1 hour revision + 30 minutes MCQs + 30 minutes previous questions. Take short breaks and revise regularly.";
+
+ if(x.includes("exam"))
+  return "📝 For exams: understand concepts first, make short notes, practise questions, revise weak topics and use active recall instead of only rereading.";
+
+ if(x.includes("hello")||x.includes("hi"))
+  return "👋 Hello! Ask me anything related to your studies, such as Anatomy, Physiology, Biology, Nursing, Pharmacology or exam preparation.";
+
+ return "📚 I can help with study-related topics such as Anatomy, Physiology, Biology, Nursing, Pharmacology, exam preparation and study planning. Ask me a specific acad
