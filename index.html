@@ -2,671 +2,694 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DR. TRS College of Nursing & S.S. Allied Health Sciences</title>
-<meta name="description" content="DR. TRS College of Nursing & S.S. Allied Health Sciences - Empowering Knowledge, Inspiring Excellence, Building Futures.">
-<meta name="theme-color" content="#09251f">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="DR. TRS College of Nursing & S.S. Allied Health Sciences">
+<title>DR. TRS College | Digital Campus</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap');
-
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{
-font-family:"DM Sans",sans-serif;
-color:#17221f;
-background:#f8f8f5;
-line-height:1.6
-}
+body{font-family:Arial,sans-serif;color:#17221f;background:#f6f8f6;line-height:1.6}
 a{text-decoration:none;color:inherit}
-.container{width:min(1180px,92%);margin:auto}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer}
+:root{--green:#063d34;--green2:#0a5548;--gold:#bd934c;--light:#eef3f0;--white:#fff;--muted:#69756f}
 
-/* TOP BAR */
-.topbar{
-background:#061b17;color:#dce5df;
-font-size:12px;padding:9px 0
-}
-.topbar .container{
-display:flex;justify-content:space-between;gap:15px
-}
-.top-links{display:flex;gap:20px}
+.container{width:min(1150px,92%);margin:auto}
+.top{background:#03241e;color:#fff;padding:7px;font-size:12px}
+.top .container{display:flex;justify-content:space-between}
 
-/* HEADER */
-header{
-background:#fff;
-position:sticky;
-top:0;
-z-index:1000;
-box-shadow:0 2px 18px rgba(0,0,0,.07)
-}
-.nav{
-height:78px;
+header{background:#fff;position:sticky;top:0;z-index:99;box-shadow:0 2px 15px #0001}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{width:45px;height:45px;border-radius:50%;background:var(--green);color:#d9bd78;display:grid;place-items:center;font-weight:bold;font-size:11px;text-align:center}
+.brand{display:flex;align-items:center;gap:10px}
+.brand b{color:var(--green);display:block;font-size:14px}
+.brand small{font-size:9px;color:#777}
+nav{display:flex;gap:18px;align-items:center}
+nav a{font-size:12px;font-weight:bold;color:#33423d}
+nav a:hover{color:var(--gold)}
+.apply{background:var(--gold);color:#fff!important;padding:10px 14px;border-radius:5px}
+.menu{display:none;border:0;background:none;font-size:28px;color:var(--green)}
+
+.hero{
+min-height:570px;
 display:flex;
 align-items:center;
-justify-content:space-between
+background:linear-gradient(90deg,#03251ee8,#063d3490),
+url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1800&q=85") center/cover;
+color:#fff
 }
-.brand{display:flex;align-items:center;gap:13px}
-.logo{
-width:50px;height:50px;border-radius:50%;
-background:#092f27;color:#c7a65b;
-display:grid;place-items:center;
-font-weight:700;font-size:13px;
-border:2px solid #c7a65b
-}
-.brand-text strong{
-display:block;font-size:14px;
-letter-spacing:.4px;color:#09251f
-}
-.brand-text span{
-font-size:10px;color:#777;
-letter-spacing:1px
-}
-nav ul{display:flex;list-style:none;gap:23px;align-items:center}
-nav a{font-size:13px;font-weight:600;color:#34403c}
-nav a:hover{color:#a5823e}
-.apply{
-background:#a88748!important;color:#fff!important;
-padding:12px 19px;border-radius:5px
-}
-.menu{display:none;font-size:28px;cursor:pointer}
+.hero-text{max-width:720px}
+.tag{color:#d7b96e;font-size:12px;font-weight:bold;letter-spacing:2px;text-transform:uppercase}
+.hero h1{font-size:clamp(42px,7vw,70px);line-height:1.05;margin:12px 0}
+.hero p{color:#dce7e3;margin-bottom:24px}
+.btn{display:inline-block;border:0;border-radius:5px;padding:12px 18px;font-weight:bold;font-size:12px;margin:4px}
+.btn-g{background:var(--gold);color:#fff}
+.btn-w{background:#fff;color:var(--green)}
+.btn-dark{background:var(--green);color:#fff}
 
-/* HERO */
-.hero{
-min-height:680px;
-display:flex;align-items:center;
-position:relative;
-background:
-linear-gradient(90deg,rgba(4,27,22,.96),rgba(5,39,31,.78),rgba(5,39,31,.35)),
-url("https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1800&q=85")
-center/cover
-}
-.hero-content{color:white;max-width:760px;padding:100px 0}
-.kicker{
-color:#d5b66c;
-font-size:12px;font-weight:700;
-letter-spacing:2px;margin-bottom:18px
-}
-.hero h1{
-font-family:Newsreader,serif;
-font-size:clamp(42px,6vw,72px);
-line-height:1.03;
-font-weight:500;
-margin-bottom:24px
-}
-.hero p{font-size:17px;color:#d8e0dc;max-width:650px;margin-bottom:32px}
-.buttons{display:flex;gap:13px;flex-wrap:wrap}
-.btn{
-display:inline-block;padding:14px 22px;
-border-radius:5px;font-weight:700;font-size:13px
-}
-.btn-gold{background:#b39252;color:#fff}
-.btn-outline{border:1px solid rgba(255,255,255,.55);color:#fff}
+section{padding:70px 0}
+.title{margin-bottom:28px}
+.title .tag{color:var(--gold)}
+.title h2{font-size:42px;color:var(--green);margin:5px 0}
+.title p{color:var(--muted);max-width:700px}
 
-/* QUICK LINKS */
-.quick{
-background:#fff;
-padding:24px 0;
-box-shadow:0 4px 25px rgba(0,0,0,.08)
-}
-.quick-grid{
-display:grid;
-grid-template-columns:repeat(6,1fr);
-gap:12px
-}
-.quick-card{
-padding:17px 10px;
-text-align:center;
-border-right:1px solid #e5e5df
-}
-.quick-card:last-child{border:0}
-.quick-card b{display:block;color:#092f27;font-size:13px}
-.quick-card span{font-size:11px;color:#777}
+.quick{background:#fff;padding:18px 0}
+.quick-grid{display:grid;grid-template-columns:repeat(6,1fr)}
+.quick a{text-align:center;border-right:1px solid #ddd;padding:8px;font-size:11px;color:var(--green);font-weight:bold}
+.quick span{display:block;color:#777;font-size:9px;font-weight:normal}
 
-/* GENERAL */
-section{padding:90px 0}
-.section-head{margin-bottom:42px}
-.eyebrow{
-color:#a17d3e;font-weight:700;
-font-size:11px;letter-spacing:2px;
-text-transform:uppercase;margin-bottom:10px
-}
-.section-head h2{
-font-family:Newsreader,serif;
-font-size:46px;color:#09251f;
-font-weight:500;line-height:1.1
-}
-.section-head p{color:#68716e;max-width:650px;margin-top:12px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+.about-img{height:420px;border-radius:10px;background:url("https://images.unsplash.com/photo-1606761568499-6d2451b23c66?auto=format&fit=crop&w=1000&q=85") center/cover}
+.about p{color:var(--muted);margin:10px 0}
+.check{margin:10px 0;font-size:13px}
+.check b{color:var(--gold);margin-right:8px}
 
-/* ABOUT */
-.about-grid{
-display:grid;grid-template-columns:1fr 1fr;
-gap:65px;align-items:center
-}
-.about-image{
-min-height:480px;border-radius:8px;
-background:
-linear-gradient(0deg,rgba(5,34,27,.2),transparent),
-url("https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1000&q=85")
-center/cover
-}
-.about-copy p{color:#68716e;margin:15px 0}
-.points{display:grid;gap:13px;margin-top:25px}
-.point{
-display:flex;gap:12px;align-items:flex-start;
-font-size:14px
-}
-.tick{
-width:25px;height:25px;flex:none;
-background:#e8dfcc;color:#80632f;
-border-radius:50%;display:grid;place-items:center;
-font-weight:700
-}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#fff;border:1px solid #dce3df;border-radius:8px;padding:22px}
+.card:hover{transform:translateY(-2px);box-shadow:0 12px 30px #0001}
+.icon{width:42px;height:42px;background:var(--green);color:#e0bd70;border-radius:5px;display:grid;place-items:center;margin-bottom:12px}
+.card h3{color:var(--green);font-size:18px}
+.card p{color:var(--muted);font-size:12px;margin-top:5px}
+.card button{margin-top:13px;background:var(--gold);color:#fff;border:0;padding:9px 13px;border-radius:4px;font-size:11px;font-weight:bold}
 
-/* PROGRAMS */
-.programs{background:#eef1ed}
-.cards{
-display:grid;grid-template-columns:repeat(3,1fr);
-gap:20px
-}
-.card{
-background:#fff;border:1px solid #e3e6e1;
-padding:28px;border-radius:7px;
-transition:.25s
-}
-.card:hover{
-transform:translateY(-5px);
-box-shadow:0 15px 35px rgba(0,0,0,.08)
-}
-.card-icon{
-width:45px;height:45px;
-background:#092f27;color:#d3b56b;
-display:grid;place-items:center;
-border-radius:5px;margin-bottom:20px
-}
-.card h3{color:#09251f;margin-bottom:8px}
-.card p{font-size:13px;color:#737c78}
-.card a{
-display:inline-block;margin-top:17px;
-color:#9a7638;font-size:12px;font-weight:700
-}
+.stats{background:var(--green);color:#fff}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);text-align:center}
+.stat strong{font-size:38px;color:#d9ba70;display:block}
+.stat span{font-size:11px;color:#d0ddd8}
 
-/* STATS */
-.stats{
-background:#092f27;color:white;
-padding:55px 0
-}
-.stats-grid{
-display:grid;grid-template-columns:repeat(4,1fr);
-text-align:center
-}
-.stat{border-right:1px solid rgba(255,255,255,.15)}
-.stat:last-child{border:0}
-.stat strong{
-font-family:Newsreader,serif;
-font-size:42px;color:#d5b66c;
-display:block
-}
-.stat span{font-size:12px;color:#c8d2cd}
+.notice-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:18px}
+.notice{background:#fff;border:1px solid #ddd;padding:22px;border-radius:8px}
+.notice h3{color:var(--green);font-size:16px}
+.notice small{color:var(--gold);font-weight:bold}
 
-/* WHY */
-.why-grid{
-display:grid;grid-template-columns:repeat(3,1fr);gap:20px
-}
-.why{
-padding:30px;background:#fff;
-border:1px solid #e5e7e3
-}
-.why b{font-size:17px;color:#092f27}
-.why p{font-size:13px;color:#747d79;margin-top:10px}
+.admission{background:#f1eadb}
+.admission-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px}
+.step{background:#fff;margin:10px 0;padding:15px;border-radius:6px}
+.step b{color:var(--green)}
+.step span{display:block;color:var(--muted);font-size:11px}
 
-/* ADMISSIONS */
-.admission{
-background:#ded8c8
-}
-.admission-grid{
-display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center
-}
-.admission h2{
-font-family:Newsreader,serif;
-font-size:50px;color:#09251f;line-height:1.05
-}
-.admission p{margin:18px 0;color:#505c57}
-.steps{display:grid;gap:14px}
-.step{
-background:#fff;padding:18px;
-display:flex;gap:15px;border-radius:5px
-}
-.step-num{
-font-size:22px;font-weight:700;color:#a27f40
-}
-.step b{display:block;color:#17312b}
-.step span{font-size:12px;color:#737b77}
+.campus{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.photo{height:210px;border-radius:8px;background-size:cover;background-position:center;position:relative;overflow:hidden}
+.photo div{position:absolute;bottom:0;width:100%;padding:15px;color:#fff;background:linear-gradient(transparent,#000)}
+.photo h3{font-size:14px}
 
-/* DATES */
-.date-grid{
-display:grid;grid-template-columns:repeat(3,1fr);gap:18px
-}
-.date{
-background:#fff;padding:24px;
-border-left:4px solid #a88748;
-box-shadow:0 5px 20px rgba(0,0,0,.04)
-}
-.date small{color:#a17d3e;font-weight:700}
-.date h3{font-size:17px;margin:7px 0;color:#18312b}
-.date p{font-size:12px;color:#727b77}
+.portal{background:var(--light)}
+.portal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
 
-/* CAMPUS */
-.campus{
-display:grid;grid-template-columns:repeat(4,1fr);gap:14px
-}
-.campus-item{
-height:230px;border-radius:7px;
-background-size:cover;background-position:center;
-position:relative;overflow:hidden
-}
-.campus-item div{
-position:absolute;bottom:0;left:0;right:0;
-padding:18px;color:white;
-background:linear-gradient(transparent,rgba(0,0,0,.8))
-}
-.campus-item h3{font-size:16px}
+.ai{background:#042a23;color:#fff}
+.ai-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:30px;align-items:center}
+.ai h2{font-size:45px;line-height:1.1}
+.ai p{color:#cbd8d3;margin:12px 0}
+.chatbox{background:#fff;color:#222;border-radius:8px;overflow:hidden}
+.chat-head{background:#edf2ef;padding:15px;color:var(--green);font-weight:bold}
+.chat{height:260px;overflow:auto;padding:12px}
+.msg{padding:9px 12px;border-radius:8px;margin:8px 0;font-size:12px;max-width:85%}
+.bot{background:#e8efeb}
+.user{background:var(--green);color:#fff;margin-left:auto}
+.chat-input{display:flex;border-top:1px solid #ddd}
+.chat-input input{flex:1;border:0;padding:14px;outline:0}
+.chat-input button{border:0;background:var(--gold);color:#fff;padding:0 18px}
 
-/* PORTALS */
-.portal-section{background:#f0f2ee}
-.portal-grid{
-display:grid;grid-template-columns:repeat(4,1fr);gap:15px
-}
-.portal{
-background:#fff;padding:25px;border:1px solid #dde2dd;
-border-top:3px solid #a88748
-}
-.portal h3{color:#092f27;font-size:17px}
-.portal p{font-size:12px;color:#747c78;margin:8px 0 18px}
-.portal button{
-border:0;background:#092f27;color:white;
-padding:10px 15px;border-radius:4px;font-size:11px
-}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:35px}
+.form{background:#fff;border:1px solid #ddd;padding:23px;border-radius:8px}
+.form label{font-size:11px;font-weight:bold;color:var(--green);display:block}
+.form input,.form select,.form textarea{width:100%;padding:11px;margin:5px 0 13px;border:1px solid #d4dcd8;border-radius:4px;outline:0}
+.form textarea{height:100px}
+.form button{background:var(--green);color:#fff;border:0;padding:11px 17px;border-radius:4px;font-weight:bold}
+.success{display:none;background:#e6f5eb;color:#267047;padding:10px;margin-top:10px;font-size:12px}
 
-/* NEWS */
-.news-grid{
-display:grid;grid-template-columns:2fr 1fr 1fr;gap:18px
-}
-.news{
-background:#fff;border:1px solid #e2e5e1;padding:25px
-}
-.news:first-child{background:#092f27;color:#fff}
-.news:first-child h3{color:#fff}
-.news h3{color:#17322c;margin:8px 0}
-.news p{font-size:12px;color:#77807c}
-.news:first-child p{color:#d1dad6}
-.news small{font-size:10px;color:#a17d3e;font-weight:700}
+footer{background:#03221c;color:#c9d4d0;padding:45px 0}
+.footer{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px}
+footer h3{color:#fff;font-size:14px;margin-bottom:10px}
+footer p,footer a{font-size:11px;color:#9eaaa6;display:block;margin:5px 0}
+.copy{border-top:1px solid #ffffff22;margin-top:25px;padding-top:15px;font-size:10px}
 
-/* AI */
-.ai{
-background:#071f1a;color:#fff;
-padding:70px 0
-}
-.ai-box{
-border:1px solid rgba(213,182,108,.35);
-padding:38px;max-width:900px;margin:auto;
-text-align:center
-}
-.ai h2{
-font-family:Newsreader,serif;font-size:42px
-}
-.ai p{color:#c7d0cc;margin:10px auto 20px;max-width:600px}
-.ai-input{
-display:flex;max-width:600px;margin:auto
-}
-.ai-input input{
-flex:1;padding:14px;border:0;outline:0
-}
-.ai-input button{
-background:#b39252;color:#fff;border:0;padding:0 20px
-}
+.modal{display:none;position:fixed;inset:0;background:#0009;z-index:999;padding:15px;align-items:center;justify-content:center}
+.modal.show{display:flex}
+.modal-box{background:#fff;width:min(600px,100%);max-height:90vh;overflow:auto;padding:25px;border-radius:8px;position:relative}
+.modal-box h2{color:var(--green);font-size:30px}
+.close{position:absolute;right:15px;top:8px;border:0;background:none;font-size:27px}
+.modal-box p{font-size:12px;color:var(--muted);margin:5px 0 15px}
 
-/* CONTACT */
-.contact-grid{
-display:grid;grid-template-columns:1fr 1fr;gap:50px
-}
-.contact-info{display:grid;gap:18px}
-.contact-item{
-padding:20px;background:#fff;border:1px solid #e4e6e2
-}
-.contact-item b{color:#092f27}
-.contact-item span{display:block;color:#747c78;font-size:13px}
-.form{
-background:#fff;padding:30px;border:1px solid #e1e4df
-}
-.form input,.form textarea,.form select{
-width:100%;padding:13px;margin-bottom:12px;
-border:1px solid #d9ddd8;outline:0;font-family:inherit
-}
-.form textarea{height:110px;resize:vertical}
-
-/* FOOTER */
-footer{
-background:#061b17;color:#d0dad5;
-padding:60px 0 20px
-}
-.footer-grid{
-display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px
-}
-footer h3{color:#fff;font-size:14px;margin-bottom:15px}
-footer p,footer a{font-size:12px;color:#9eaaa5}
-footer a{display:block;margin:7px 0}
-.footer-bottom{
-border-top:1px solid rgba(255,255,255,.12);
-margin-top:40px;padding-top:18px;
-font-size:11px;color:#899691;
-display:flex;justify-content:space-between
-}
-
-/* MOBILE */
-@media(max-width:900px){
-nav{display:none}
-.menu{display:block}
-nav.active{
-display:block;position:absolute;
-top:78px;left:0;right:0;
-background:#fff;padding:20px;
-box-shadow:0 10px 20px rgba(0,0,0,.1)
-}
-nav.active ul{display:grid;gap:15px}
+@media(max-width:850px){
+nav{display:none}.menu{display:block}
 .quick-grid{grid-template-columns:repeat(3,1fr)}
-.cards,.why-grid{grid-template-columns:1fr 1fr}
-.portal-grid{grid-template-columns:1fr 1fr}
+.about,.admission-grid,.ai-grid,.contact{grid-template-columns:1fr}
+.cards{grid-template-columns:1fr 1fr}
 .campus{grid-template-columns:1fr 1fr}
-.about-grid,.admission-grid,.contact-grid{grid-template-columns:1fr}
-.news-grid{grid-template-columns:1fr}
-.footer-grid{grid-template-columns:1fr 1fr}
+.portal-grid{grid-template-columns:1fr 1fr}
+.notice-grid{grid-template-columns:1fr}
+.footer{grid-template-columns:1fr 1fr}
+.stat-grid{grid-template-columns:1fr 1fr;gap:20px}
 }
-
-@media(max-width:600px){
-.topbar .container{display:none}
-.nav{height:70px}
-.brand-text strong{font-size:11px}
-.brand-text span{font-size:8px}
-.logo{width:42px;height:42px}
-.hero{min-height:600px}
-.hero-content{padding:80px 0}
-.hero h1{font-size:43px}
-.hero p{font-size:14px}
-section{padding:65px 0}
-.section-head h2{font-size:38px}
+@media(max-width:550px){
+.hero{min-height:520px}
+.cards,.campus,.portal-grid,.footer{grid-template-columns:1fr}
 .quick-grid{grid-template-columns:repeat(2,1fr)}
-.cards,.why-grid,.portal-grid,.campus,.date-grid{grid-template-columns:1fr}
-.stats-grid{grid-template-columns:1fr 1fr;gap:30px}
-.stat{border:0}
-.admission h2{font-size:40px}
-.ai-box{padding:25px 15px}
-.ai-input{display:grid;gap:8px}
-.ai-input button{padding:12px}
-.footer-grid{grid-template-columns:1fr}
-.footer-bottom{display:block}
+.hero h1{font-size:43px}
+.title h2{font-size:34px}
 }
 </style>
 </head>
 
 <body>
 
-<div class="topbar">
+<div class="top">
 <div class="container">
-<span>AN INSTITUTION IN THE MAKING, WITH A CLEAR PURPOSE.</span>
-<div class="top-links">
-<span>Admissions Open</span>
-<span>Student Portal</span>
-</div>
+<span>DR. TRS College Digital Campus</span>
+<span>Academic • Admissions • Student Services</span>
 </div>
 </div>
 
 <header>
 <div class="container nav">
 <a href="#home" class="brand">
-<div class="logo">TRS</div>
-<div class="brand-text">
-<strong>DR. TRS COLLEGE</strong>
-<span>NURSING & ALLIED HEALTH SCIENCES</span>
-</div>
+<div class="logo">DR<br>TRS</div>
+<div><b>DR. TRS COLLEGE</b><small>NURSING & S.S. ALLIED HEALTH SCIENCES</small></div>
 </a>
 
-<div class="menu" onclick="toggleMenu()">☰</div>
-
-<nav id="nav">
-<ul>
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#academics">Academics</a></li>
-<li><a href="#admissions">Admissions</a></li>
-<li><a href="#campus">Campus</a></li>
-<li><a href="#news">News</a></li>
-<li><a href="#contact">Contact</a></li>
-<li><a href="#portals" class="apply">Apply Now</a></li>
-</ul>
+<nav>
+<a href="#about">About</a>
+<a href="#academics">Academics</a>
+<a href="#admission">Admissions</a>
+<a href="#campus">Campus</a>
+<a href="#ai">Study AI</a>
+<a href="#contact">Contact</a>
+<a href="#admission" class="apply">APPLY NOW</a>
 </nav>
+
+<button class="menu" onclick="mobileMenu()">☰</button>
+</div>
+<div id="mobileNav" style="display:none;background:#fff;padding:12px">
+<div class="container">
+<a href="#about" onclick="mobileMenu()">About</a><br>
+<a href="#academics" onclick="mobileMenu()">Academics</a><br>
+<a href="#admission" onclick="mobileMenu()">Admissions</a><br>
+<a href="#campus" onclick="mobileMenu()">Campus</a><br>
+<a href="#ai" onclick="mobileMenu()">Study AI</a><br>
+<a href="#contact" onclick="mobileMenu()">Contact</a>
+</div>
 </div>
 </header>
 
 <main>
 
 <section class="hero" id="home">
-<div class="container hero-content">
-<div class="kicker">DR. TRS COLLEGE OF NURSING & S.S. ALLIED HEALTH SCIENCES</div>
-<h1>Empowering Knowledge.<br>Inspiring Excellence.<br>Building Futures.</h1>
+<div class="container hero-text">
+<div class="tag">Welcome to the Digital Campus</div>
+<h1>Learn. Serve. Lead.</h1>
 <p>
-A modern academic institution committed to learning, professional development,
-student experience and a clear purpose for the future.
+A modern digital experience for students, applicants and the academic community of DR. TRS College of Nursing & S.S. Allied Health Sciences.
 </p>
-<div class="buttons">
-<a href="#academics" class="btn btn-gold">Explore Programs</a>
-<a href="#admissions" class="btn btn-outline">Admissions</a>
-<a href="#contact" class="btn btn-outline">Enquire Now</a>
-</div>
+<a href="#admission" class="btn btn-g">Apply Now</a>
+<a href="#academics" class="btn btn-w">Explore Academics</a>
 </div>
 </section>
 
 <div class="quick">
 <div class="container quick-grid">
-<a href="#admissions" class="quick-card"><b>Admissions</b><span>Apply & Enquire</span></a>
-<a href="#academics" class="quick-card"><b>Programs</b><span>Courses & Departments</span></a>
-<a href="#dates" class="quick-card"><b>Important Dates</b><span>Academic Calendar</span></a>
-<a href="#portals" class="quick-card"><b>Student Portal</b><span>Access Dashboard</span></a>
-<a href="#portals" class="quick-card"><b>Faculty Portal</b><span>Faculty Access</span></a>
-<a href="#contact" class="quick-card"><b>Downloads</b><span>Forms & Information</span></a>
+<a href="#admission">📝<b>Admissions</b><span>Apply online</span></a>
+<a href="#academics">📚<b>Academics</b><span>Programs</span></a>
+<a href="#ai">🤖<b>Study AI</b><span>Academic help</span></a>
+<a href="#campus">🏫<b>Campus</b><span>Explore</span></a>
+<a href="#contact">📞<b>Help Desk</b><span>Enquiries</span></a>
+<a href="#portal">🎓<b>Student Portal</b><span>Access</span></a>
 </div>
 </div>
 
 <section id="about">
-<div class="container about-grid">
-<div class="about-image"></div>
-<div class="about-copy">
-<div class="eyebrow">About the Institution</div>
-<h2 class="section-head"><h2>Learning with purpose. Growing with confidence.</h2></h2>
+<div class="container about">
+<div class="about-img"></div>
+<div>
+<div class="title">
+<div class="tag">About the College</div>
+<h2>Education with purpose.</h2>
 <p>
-DR. TRS College of Nursing & S.S. Allied Health Sciences is envisioned as
-a professional academic environment where students can learn, develop
-practical skills and prepare for meaningful careers.
+DR. TRS College provides an academic-focused digital platform for learning, admissions, student support and campus information.
 </p>
-<p>
-The institution focuses on academic learning, professional values,
-student development and a supportive campus experience.
-</p>
-<div class="points">
-<div class="point"><div class="tick">✓</div><span>Student-focused academic environment</span></div>
-<div class="point"><div class="tick">✓</div><span>Professional learning and practical exposure</span></div>
-<div class="point"><div class="tick">✓</div><span>Modern approach to education and development</span></div>
 </div>
+<div class="check"><b>✓</b> Student-centred academic environment</div>
+<div class="check"><b>✓</b> Nursing and allied health education</div>
+<div class="check"><b>✓</b> Digital student services</div>
+<div class="check"><b>✓</b> Academic resources and study support</div>
+<a href="#contact" class="btn btn-dark">Contact College</a>
 </div>
 </div>
 </section>
 
-<section class="programs" id="academics">
+<section id="academics" style="background:#edf2ef">
 <div class="container">
-<div class="section-head">
-<div class="eyebrow">Academics</div>
-<h2>Programs designed for tomorrow.</h2>
-<p>Explore academic pathways and discover opportunities for professional growth.</p>
+<div class="title">
+<div class="tag">Academic School</div>
+<h2>Programs & Learning</h2>
+<p>Explore the academic areas available through the digital campus.</p>
 </div>
 
 <div class="cards">
+
 <div class="card">
-<div class="card-icon">01</div>
-<h3>Nursing Programs</h3>
-<p>Professional nursing education with academic and practical learning.</p>
-<a href="#admissions">VIEW PROGRAM →</a>
+<div class="icon">RN</div>
+<h3>Nursing</h3>
+<p>Study support for nursing concepts, theory, revision and academic preparation.</p>
+<button onclick="openModal('Nursing','Nursing academic information')">Explore</button>
 </div>
 
 <div class="card">
-<div class="card-icon">02</div>
+<div class="icon">AH</div>
 <h3>Allied Health Sciences</h3>
-<p>Explore professional pathways within allied health and healthcare education.</p>
-<a href="#admissions">VIEW PROGRAM →</a>
+<p>Academic resources and learning support for allied health subjects.</p>
+<button onclick="openModal('Allied Health Sciences','Allied Health academic information')">Explore</button>
 </div>
 
 <div class="card">
-<div class="card-icon">03</div>
-<h3>Departments</h3>
-<p>Academic departments, subjects and learning areas will be presented here.</p>
-<a href="#contact">ENQUIRE →</a>
+<div class="icon">🧬</div>
+<h3>Basic Sciences</h3>
+<p>Anatomy, physiology, biology and other foundational academic subjects.</p>
+<button onclick="openModal('Basic Sciences','Basic Science learning resources')">Explore</button>
 </div>
+
 </div>
 </div>
 </section>
 
 <section class="stats">
-<div class="container stats-grid">
-<div class="stat"><strong>01</strong><span>Student-focused learning</span></div>
-<div class="stat"><strong>02</strong><span>Professional programs</span></div>
-<div class="stat"><strong>03</strong><span>Campus facilities</span></div>
-<div class="stat"><strong>24/7</strong><span>Information access</span></div>
+<div class="container stat-grid">
+<div class="stat"><strong>01</strong><span>Digital Campus</span></div>
+<div class="stat"><strong>24/7</strong><span>Study Resources</span></div>
+<div class="stat"><strong>AI</strong><span>Academic Assistant</span></div>
+<div class="stat"><strong>∞</strong><span>Learning</span></div>
 </div>
 </section>
 
-<section>
+<section id="notices">
 <div class="container">
-<div class="section-head">
-<div class="eyebrow">Why DR. TRS</div>
-<h2>A foundation for learning and growth.</h2>
+<div class="title">
+<div class="tag">Announcements</div>
+<h2>Notice Board</h2>
 </div>
-<div class="why-grid">
-<div class="why"><b>Academic Focus</b><p>Structured academic information and learning resources for students.</p></div>
-<div class="why"><b>Professional Development</b><p>Education designed to support professional skills and future opportunities.</p></div>
-<div class="why"><b>Student Experience</b><p>A campus environment focused on learning, activities and personal development.</p></div>
-<div class="why"><b>Modern Infrastructure</b><p>Facilities and learning spaces planned around contemporary education.</p></div>
-<div class="why"><b>Career Preparation</b><p>Career guidance, internships and placement information can be managed through the institution.</p></div>
-<div class="why"><b>Connected Campus</b><p>Digital access to notices, calendars, academic information and student services.</p></div>
+<div class="notice-grid">
+<div class="notice">
+<small>ACADEMIC</small>
+<h3>Academic resources and study support</h3>
+<p>Students can use the Study AI for revision, explanations and practice questions.</p>
+</div>
+<div class="notice">
+<small>ADMISSIONS</small>
+<h3>Applications</h3>
+<p>Use the online enquiry form for admission information.</p>
+</div>
+<div class="notice">
+<small>STUDENTS</small>
+<h3>Digital Services</h3>
+<p>Student portal interface is available from this website.</p>
+</div>
 </div>
 </div>
 </section>
 
-<section class="admission" id="admissions">
+<section id="admission" class="admission">
 <div class="container admission-grid">
 <div>
-<div class="eyebrow">Admissions</div>
-<h2>Your journey starts here.</h2>
-<p>
-Discover programs, understand eligibility, prepare your documents and
-begin your admission enquiry.
-</p>
-<a href="#contact" class="btn btn-gold">Start Admission Enquiry</a>
+<div class="title">
+<div class="tag">Admissions</div>
+<h2>Start your academic journey.</h2>
+<p>Submit an admission enquiry and the college can respond through the configured Netlify form.</p>
+</div>
+<button class="btn btn-dark" onclick="openAdmission()">Apply Now</button>
 </div>
 
-<div class="steps">
-<div class="step"><div class="step-num">01</div><div><b>Explore Programs</b><span>Review available academic pathways.</span></div></div>
-<div class="step"><div class="step-num">02</div><div><b>Check Eligibility</b><span>Understand program requirements.</span></div></div>
-<div class="step"><div class="step-num">03</div><div><b>Submit Enquiry</b><span>Send your details to the admissions team.</span></div></div>
-<div class="step"><div class="step-num">04</div><div><b>Complete Application</b><span>Application and document verification follows.</span></div></div>
-</div>
-</div>
-</section>
-
-<section id="dates">
-<div class="container">
-<div class="section-head">
-<div class="eyebrow">Academic Calendar</div>
-<h2>Important dates & updates.</h2>
-<p>Official dates can be updated by the college administration.</p>
-</div>
-
-<div class="date-grid">
-<div class="date"><small>ADMISSIONS</small><h3>Admission Enquiry</h3><p>Contact the college for current admission dates.</p></div>
-<div class="date"><small>ACADEMICS</small><h3>Academic Calendar</h3><p>Academic schedules and holidays will be published here.</p></div>
-<div class="date"><small>EXAMINATIONS</small><h3>Examination Updates</h3><p>Exam schedules and results will be announced officially.</p></div>
+<div>
+<div class="step"><b>01 — Explore</b><span>Review your preferred academic area.</span></div>
+<div class="step"><b>02 — Apply</b><span>Submit your basic admission enquiry.</span></div>
+<div class="step"><b>03 — Connect</b><span>College admission team can follow up.</span></div>
+<div class="step"><b>04 — Enrol</b><span>Complete official admission requirements.</span></div>
 </div>
 </div>
 </section>
 
 <section id="campus">
 <div class="container">
-<div class="section-head">
-<div class="eyebrow">Campus Life</div>
-<h2>Spaces that support student life.</h2>
+<div class="title">
+<div class="tag">Digital Campus</div>
+<h2>Explore Campus</h2>
 </div>
 
 <div class="campus">
-<div class="campus-item" style="background-image:url('https://images.unsplash.com/photo-1519452575417-564c1401ecc0?auto=format&fit=crop&w=800&q=80')"><div><h3>Classrooms</h3></div></div>
-<div class="campus-item" style="background-image:url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80')"><div><h3>Laboratories</h3></div></div>
-<div class="campus-item" style="background-image:url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=800&q=80')"><div><h3>Library</h3></div></div>
-<div class="campus-item" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80')"><div><h3>Student Life</h3></div></div>
+<div class="photo" style="background-image:url('https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=80')"><div><h3>Campus</h3></div></div>
+<div class="photo" style="background-image:url('https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=800&q=80')"><div><h3>Healthcare Learning</h3></div></div>
+<div class="photo" style="background-image:url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80')"><div><h3>Classrooms</h3></div></div>
+<div class="photo" style="background-image:url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=800&q=80')"><div><h3>Library</h3></div></div>
 </div>
 </div>
 </section>
 
-<section class="portal-section" id="portals">
+<section id="portal" class="portal">
 <div class="container">
-<div class="section-head">
-<div class="eyebrow">Digital Campus</div>
-<h2>Connected services for every journey.</h2>
-<p>Portal interfaces are prepared for future secure authentication and database integration.</p>
+<div class="title">
+<div class="tag">Digital Services</div>
+<h2>Student & Academic Portals</h2>
+<p>Demo portal interfaces. Real authentication should be connected before production use.</p>
 </div>
 
 <div class="portal-grid">
-<div class="portal">
-<h3>Applicant Portal</h3>
-<p>Apply, upload documents and track your admission application.</p>
-<button onclick="portal('Applicant')">Applicant Login</button>
-</div>
-<div class="portal">
+
+<div class="card">
+<div class="icon">🎓</div>
 <h3>Student Portal</h3>
-<p>Access attendance, marks, timetable, notices and academic information.</p>
-<button onclick="portal('Student')">Student Login</button>
+<p>Academic services and student dashboard.</p>
+<button onclick="portal('Student')">Open Portal</button>
 </div>
-<div class="portal">
+
+<div class="card">
+<div class="icon">📝</div>
+<h3>Applicant Portal</h3>
+<p>Admission application access.</p>
+<button onclick="portal('Applicant')">Open Portal</button>
+</div>
+
+<div class="card">
+<div class="icon">👨‍🏫</div>
 <h3>Faculty Portal</h3>
-<p>Assigned classes, attendance, marks, materials and timetable.</p>
-<button onclick="portal('Faculty')">Faculty Login</button>
+<p>Faculty academic services.</p>
+<button onclick="portal('Faculty')">Open Portal</button>
 </div>
-<div class="portal">
+
+<div class="card">
+<div class="icon">🔐</div>
 <h3>Admin Portal</h3>
-<p>Manage students, faculty, admissions, content and academic records.</p>
-<button onclick="portal('Super Admin')">Admin Login</button>
+<p>Administration interface.</p>
+<button onclick="portal('Admin')">Open Portal</button>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="ai" class="ai">
+<div class="container ai-grid">
+<div>
+<div class="tag">Academic Assistant</div>
+<h2>Study AI</h2>
+<p>
+Ask academic questions about anatomy, physiology, nursing, biology, revision, study planning and quizzes.
+</p>
+<button class="btn btn-g" onclick="document.getElementById('question').focus()">Ask a Question</button>
+</div>
+
+<div class="chatbox">
+<div class="chat-head">🤖 DR. TRS Study AI<br><small>Studies & academic topics only</small></div>
+<div class="chat" id="chat">
+<div class="msg bot">Hello! Ask me a study question. Example: “Explain the cardiac cycle in simple words.”</div>
+</div>
+<div class="chat-input">
+<input id="question" placeholder="Ask a study question..." onkeydown="if(event.key==='Enter')askAI()">
+<button onclick="askAI()">Ask</button>
 </div>
 </div>
 </div>
 </section>
 
-<section id="news">
-<div class="container">
-<div class="section-head">
-<div class="eyebrow">News & Events</div>
-<h2>What's happening at DR. TRS.</h2>
+<section id="contact">
+<div class="container contact">
+<div>
+<div class="title">
+<div class="tag">Help Desk</div>
+<h2>Need information?</h2>
+<p>Send an enquiry for admissions, academics or student services.</p>
+</div>
+<div class="card">
+<h3>Admissions</h3>
+<p>Use the online application form.</p>
+</div>
+<br>
+<div class="card">
+<h3>Academic Support</h3>
+<p>Use the Study AI for academic questions.</p>
+</div>
 </div>
 
-<div class="news-grid">
-<div class="news">
-<small>COLLEGE UPDATE</small>
-<h3>Building an academic community with a clear purpose.</h3>
-<p>Official college announcements, achievements and institutional updates will appear here.</p>
+<form class="form" id="contactForm" name="contact-enquiry" method="POST" data-netlify="true">
+<input type="hidden" name="form-name" value="contact-enquiry">
+<label>Name</label>
+<input required name="name" placeholder="Your name">
+
+<label>Email</label>
+<input required type="email" name="email" placeholder="you@example.com">
+
+<label>Subject</label>
+<select name="subject">
+<option>Admissions</option>
+<option>Academics</option>
+<option>Student Services</option>
+<option>General Enquiry</option>
+</select>
+
+<label>Message</label>
+<textarea required name="message" placeholder="Write your enquiry"></textarea>
+
+<button type="submit">Send Enquiry</button>
+<div class="success" id="contactSuccess">Your enquiry has been submitted.</div>
+</form>
 </div>
-<div class="news">
-<small>EVENTS</small>
-<h3>Workshops & Seminars</h3>
-<p>Upcoming academic events and student activities.</p>
+</section>
+
+</main>
+
+<footer>
+<div class="container footer">
+<div>
+<h3>DR. TRS COLLEGE</h3>
+<p>Digital campus for Nursing & S.S. Allied Health Sciences.</p>
 </div>
-<div class="news">
-<small>ANNOUNCEMENT</small>
-<h3>Student Notices</h3>
-<p>Important notices will be published through the digital campus.</p>
+<div>
+<h3>Explore</h3>
+<a href="#about">About</a>
+<a href="#academics">Academics</a>
+<a href="#admission">Admissions</a>
+</div>
+<div>
+<h3>Students</h3>
+<a href="#portal">Student Portal</a>
+<a href="#ai">Study AI</a>
+<a href="#notices">Notices</a>
+</div>
+<div>
+<h3>Help</h3>
+<a href="#contact">Contact</a>
+<a href="#admission">Apply Now</a>
 </div>
 </div>
-  </div>
+<div class="container copy">
+© <span id="year"></span> DR. TRS College. Digital Campus.
+</div>
+</footer>
+
+<!-- ADMISSION MODAL -->
+<div class="modal" id="admissionModal">
+<div class="modal-box">
+<button class="close" onclick="closeModal('admissionModal')">×</button>
+<h2>Admission Application</h2>
+<p>Submit an admission enquiry.</p>
+
+<form class="form" id="admissionForm" name="admission-application" method="POST" data-netlify="true">
+<input type="hidden" name="form-name" value="admission-application">
+
+<label>Full Name</label>
+<input required name="name" placeholder="Full name">
+
+<label>Mobile Number</label>
+<input required name="mobile" placeholder="Mobile number">
+
+<label>Email</label>
+<input required type="email" name="email" placeholder="Email">
+
+<label>Program</label>
+<select required name="program">
+<option value="">Select program</option>
+<option>Nursing</option>
+<option>Allied Health Sciences</option>
+<option>Other</option>
+</select>
+
+<label>Qualification</label>
+<input name="qualification" placeholder="12th / Diploma / Degree">
+
+<label>Message</label>
+<textarea name="message" placeholder="Your enquiry"></textarea>
+
+<button type="submit">Submit Application</button>
+<div class="success" id="admissionSuccess">Application enquiry submitted.</div>
+</form>
+</div>
+</div>
+
+<!-- PORTAL MODAL -->
+<div class="modal" id="portalModal">
+<div class="modal-box">
+<button class="close" onclick="closeModal('portalModal')">×</button>
+<h2 id="portalTitle">Student Portal</h2>
+<p id="portalText">Demo login interface.</p>
+
+<form class="form" id="loginForm">
+<label>User ID / Email</label>
+<input required placeholder="Enter ID" id="loginId">
+
+<label>Password</label>
+<input required type="password" placeholder="Password">
+
+<button type="submit">Sign In</button>
+<div class="success" id="loginSuccess">Demo login submitted.</div>
+</form>
+</div>
+</div>
+
+<!-- INFORMATION MODAL -->
+<div class="modal" id="infoModal">
+<div class="modal-box">
+<button class="close" onclick="closeModal('infoModal')">×</button>
+<h2 id="infoTitle"></h2>
+<p id="infoText"></p>
+<button class="btn btn-dark" onclick="closeModal('infoModal')">Close</button>
+</div>
+</div>
+
+<script>
+document.getElementById("year").textContent=new Date().getFullYear();
+
+function mobileMenu(){
+let x=document.getElementById("mobileNav");
+x.style.display=x.style.display==="block"?"none":"block";
+}
+
+function openModal(id){
+document.getElementById(id).classList.add("show");
+document.body.style.overflow="hidden";
+}
+
+function closeModal(id){
+document.getElementById(id).classList.remove("show");
+document.body.style.overflow="";
+}
+
+function openAdmission(){
+openModal("admissionModal");
+}
+
+function portal(type){
+document.getElementById("portalTitle").textContent=type+" Portal";
+document.getElementById("portalText").textContent=
+"Welcome to the "+type+" Portal. This is a demo interface. Real authentication/database must be connected before production use.";
+document.getElementById("loginSuccess").style.display="none";
+document.getElementById("loginForm").reset();
+openModal("portalModal");
+}
+
+function openModalInfo(title,text){
+document.getElementById("infoTitle").textContent=title;
+document.getElementById("infoText").textContent=text;
+openModal("infoModal");
+}
+
+function openModal(title,text){
+if(title==="Nursing"||title==="Allied Health Sciences"||title==="Basic Sciences"){
+document.getElementById("infoTitle").textContent=title;
+document.getElementById("infoText").textContent=text+". Add official college course details here when verified.";
+document.getElementById("infoModal").classList.add("show");
+document.body.style.overflow="hidden";
+return;
+}
+document.getElementById(title).classList.add("show");
+document.body.style.overflow="hidden";
+}
+
+function studyAnswer(q){
+q=q.toLowerCase();
+
+if(q.includes("anatomy"))
+return "For Anatomy, learn structure + location + function. Start with a diagram, label it from memory, then test yourself without notes.";
+
+if(q.includes("physiology"))
+return "For Physiology, focus on mechanism → cause → effect. Tell me the exact topic and I can explain it step by step.";
+
+if(q.includes("nursing"))
+return "I can help with nursing theory, anatomy, physiology, fundamentals, revision, care-plan concepts and practice questions.";
+
+if(q.includes("biology"))
+return "For Biology, learn definitions first, then processes, diagrams and examples. Tell me your exact chapter.";
+
+if(q.includes("quiz")||q.includes("mcq"))
+return "Sure! Ask like: “Give me 10 Anatomy MCQs on the respiratory system.”";
+
+if(q.includes("study plan")||q.includes("timetable"))
+return "Try 40 minutes focused study + 10 minutes break. Use active recall, practice questions and review your mistakes.";
+
+if(q.includes("exam")||q.includes("revision"))
+return "For revision: list topics, mark weak areas, use active recall, solve questions, review mistakes and finish with a timed mock test.";
+
+return "I can help with Anatomy, Physiology, Nursing, Biology, study plans, revision and academic quizzes. Please mention your subject and topic.";
+}
+
+function askAI(){
+let input=document.getElementById("question");
+let q=input.value.trim();
+if(!q)return;
+
+let chat=document.getElementById("chat");
+
+let user=document.createElement("div");
+user.className="msg user";
+user.textContent=q;
+chat.appendChild(user);
+
+input.value="";
+
+let bot=document.createElement("div");
+bot.className="msg bot";
+bot.textContent=studyAnswer(q);
+chat.appendChild(bot);
+
+chat.scrollTop=chat.scrollHeight;
+}
+
+function netlifyForm(id,success){
+let form=document.getElementById(id);
+
+form.addEventListener("submit",async function(e){
+e.preventDefault();
+
+try{
+let data=new FormData(form);
+
+await fetch("/",{
+method:"POST",
+headers:{"Content-Type":"application/x-www-form-urlencoded"},
+body:new URLSearchParams(data).toString()
+});
+
+document.getElementById(success).style.display="block";
+form.reset();
+
+}catch(err){
+document.getElementById(success).style.display="block";
+}
+});
+}
+
+netlifyForm("contactForm","contactSuccess");
+netlifyForm("admissionForm","admissionSuccess");
+
+document.getElementById("loginForm").addEventListener("submit",function(e){
+e.preventDefault();
+document.getElementById("loginSuccess").style.display="block";
+});
+
+document.querySelectorAll(".modal").forEach(function(m){
+m.addEventListener("click",function(e){
+if(e.target===m)closeModal(m.id);
+});
+});
+</script>
+
+</body>
+</html>
